@@ -51,7 +51,7 @@ const City = ({ data, level }) => {
           </h1>
 
           <div className={styles.countrylist}>
-            {city.map((item, index) => (
+            {country.map((item, index) => (
               <div className={styles.country}>
                 {item.content.Name}
               </div>
