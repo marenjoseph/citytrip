@@ -1,0 +1,45 @@
+@import '../styles/colors';
+
+.city {
+  .picture {
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 0px 10px #000;
+    margin-bottom: 40px;
+  }
+
+  .short {
+    font-weight: 800;
+  }
+
+  .review {}
+
+  .countrylist {
+    display: flex;
+    margin-bottom: 40px;
+
+    .country {
+      padding: 5px 20px;
+      background-color: #f0f0f0;
+      max-width: 100px;
+      margin-right: 10px;
+      font-weight: 700;
+    }
+  }
+
+  .transportationsegment {
+    margin-top:40px;
+    .title {
+
+      font-size: 1.4em;
+      font-weight: 800;
+      margin-bottom: 20px;
+
+    }
+
+    .content {}
+  }
+
+}

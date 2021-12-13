@@ -8,7 +8,18 @@
   .title {}
 
   .flag {
-    img {}
+    width: 45px;
+    height: 30px;
+    background-size: cover;
+  }
+
+  .picture{
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 0px 10px #000;
+    margin-bottom: 40px;
   }
 
   .description {}

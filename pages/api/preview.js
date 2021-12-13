@@ -5,7 +5,9 @@ export default async function preview(req, res) {
 
   // Check the secret and next parameters
   // This secret should only be known to this API route and the CMS
-  if (req.query.secret !== "tkhIJZHQZQpEbojtRU64fAtt") {
+
+  if (req.query.secret !== "z3Cz7qrCoCnCTGQkWTiHjwtt") { //citytrip db
+  //if (req.query.secret !== "tkhIJZHQZQpEbojtRU64fAtt") { //imdb db
     return res.status(401).json({ message: "Invalid token" });
   }
 

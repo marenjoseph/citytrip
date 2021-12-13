@@ -11,7 +11,6 @@ import Movie from './Movie'
 import Personality from './Personality'
 import Studio from './Studio'
 import Genre from './Genre'
-import Country from './Country'
 import NewsItem from './NewsItem'
 import FrontpageSlideshow from './FrontpageSlideshow'
 import Intro from './Intro'
@@ -25,6 +24,8 @@ import TwoCol from './TwoCol'
 import Title from './Title'
 import TopMovies from './TopMovies'
 import AgeRating from './AgeRating'
+import City from './City'
+import Country from './Country'
 
 const Components = {
   'teaser': Teaser,
@@ -39,7 +40,6 @@ const Components = {
   'personality': Personality,
   'studio': Studio,
   'genre' : Genre,
-  'country' : Country,
   'newsitem': NewsItem,
   'frontpageslideshow':FrontpageSlideshow,
   'intro':Intro,
@@ -53,7 +53,9 @@ const Components = {
   'twocol':TwoCol,
   'title':Title,
   'topmovies':TopMovies,
-  'agerating':AgeRating
+  'agerating':AgeRating,
+  'City':City,
+  'Country' : Country,
 }
 
 

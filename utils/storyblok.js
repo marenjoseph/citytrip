@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import StoryblokClient from "storyblok-js-client";
 
 const Storyblok = new StoryblokClient({
-  accessToken: "tkhIJZHQZQpEbojtRU64fAtt",
+  accessToken: "z3Cz7qrCoCnCTGQkWTiHjwtt", //citytrips db
+  //accessToken: "tkhIJZHQZQpEbojtRU64fAtt", //imdb db
   cache: {
     clear: "auto",
     type: "memory",
@@ -44,6 +45,12 @@ export async function getData(uuid, locale, preview, components, itemtype, sortb
         break;
       case "personalities":
         sbParams.filter_query.personalities = { any_in_array: uuid };
+        break;
+      case "cities":
+        sbParams.filter_query.cities = { any_in_array: uuid};
+        break;
+      case "countries":
+        sbParams.filter_query.countries = { any_in_array: uuid};
         break;
     }
   }
