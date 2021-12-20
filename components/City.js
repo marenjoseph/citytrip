@@ -6,13 +6,15 @@ import { getData } from "../utils/storyblok"
 import RelatedItemGallerySmall from "./RelatedItemGallerySmall"
 
 const resolveCountry = {
+  default: 'Country',
   en: 'Country',
-  nl: 'land',
+  nl: 'Land',
 }
 
 const resolveTransportation = {
-  en: 'Transportation',
-  nl: 'Transport'
+  default: 'Getting there:',
+  en: 'Getting there:',
+  nl: 'Hoe geraak je er:'
 }
 
 const City = ({ data, level }) => {
@@ -33,7 +35,7 @@ const City = ({ data, level }) => {
   }
 
   const [country, setCountry] = useState([]);
-  getData(data.story.uuid, locale, content.preview = false, 'Country', 'cities').then(
+  getData(data.story.uuid, locale, content.preview = false, 'Country', 'Majorcities').then(
     function(result){
       setCountry(result.data.stories);
     }
@@ -44,17 +46,19 @@ const City = ({ data, level }) => {
     <SbEditable content={content} key={content._uid}>
       <main>
         {/* <div className={[styles.movie, styles.test].join(' ')}> */}
-        <div className={styles.city}>
+        <div className={styles.city}>      
 
           <h1 className={styles.title}>
             {content.Name}
           </h1>
-
-          <div className={styles.countrylist}>
+          
+          <div className={styles.countrysegment}>
             {country.map((item, index) => (
-              <div className={styles.country}>
-                {item.content.Name}
-              </div>
+              <a href={`/${item.full_slug}`} className={styles.relateditem}>
+                <div className={styles.country}>
+                  {item.content.Name}
+                </div>
+              </a>
             ))}
           </div>
           

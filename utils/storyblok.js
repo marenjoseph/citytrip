@@ -31,26 +31,8 @@ export async function getData(uuid, locale, preview, components, itemtype, sortb
 
   if (itemtype) {
     switch (itemtype) {
-      case "studios":
-        sbParams.filter_query.studios = { any_in_array: uuid };
-        break;
-      case "movies":
-        sbParams.filter_query.movies = { any_in_array: uuid };
-        break;
-      case "newsitems":
-        sbParams.filter_query.newsitems = { any_in_array: uuid };
-        break;
-      case "products":
-        sbParams.filter_query.products = { any_in_array: uuid };
-        break;
-      case "personalities":
-        sbParams.filter_query.personalities = { any_in_array: uuid };
-        break;
-      case "cities":
-        sbParams.filter_query.cities = { any_in_array: uuid};
-        break;
-      case "countries":
-        sbParams.filter_query.countries = { any_in_array: uuid};
+      case "Majorcities":
+        sbParams.filter_query.Majorcities = { any_in_array: uuid };
         break;
     }
   }

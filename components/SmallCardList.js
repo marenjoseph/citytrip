@@ -31,8 +31,8 @@ const SmallCardList = ({ items, title, type }) => {
         const lang = item.lang === "default" ? "/en" : `/${item.lang}`;
         return (
           <div className={styles.smallcardwrapper}>
-            {type == "product" && <SmallCard lang={lang} title={item.content.title} picture={item.content.mainpicture.filename} url={item.full_slug} type={type} price={item.content.price} />}
-            {type != "product" && <SmallCard lang={lang} title={item.content.title} picture={item.content.mainpicture.filename} url={item.full_slug} type={type} />}
+            {(type == "city" || type == "majorcity") && <SmallCard lang={lang} title={item.content.Name} picture={item.content.Picture} url={item.full_slug} type={type} />}
+            {/* add other types */}
           </div>
         );
       })}

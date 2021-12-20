@@ -26,6 +26,7 @@ import TopMovies from './TopMovies'
 import AgeRating from './AgeRating'
 import City from './City'
 import Country from './Country'
+import Transport from './Transport'
 
 const Components = {
   'teaser': Teaser,
@@ -56,6 +57,7 @@ const Components = {
   'agerating':AgeRating,
   'City':City,
   'Country' : Country,
+  'Transport' : Transport
 }
 
 

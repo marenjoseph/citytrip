@@ -3,8 +3,21 @@ import SbEditable from "storyblok-react"
 import { render } from "storyblok-rich-text-react-renderer"
 import styles from "../styles/Country.module.scss"
 import { getData } from "../utils/storyblok"
+import NewsItem from "./NewsItem"
+import SmallCardList from "./SmallCardList"
 
 
+const resolveCapital = {
+  default: 'Capital:',
+  en: 'Capital:',
+  nl: 'Hoofdstad:',
+}
+
+const resolveMajorCities = {
+  default: 'Discover other beautiful cities:',
+  en: 'Discover other beautiful cities:',
+  nl: 'Ontdek ook deze prachtige steden'
+}
 
 const Country = ({ data, level }) => {
   var locale = 'en';
@@ -16,6 +29,12 @@ const Country = ({ data, level }) => {
     if(content.Capital){
       var capital = data.rels.filter(obj => {
         return content.Capital.includes(obj.uuid);
+      })
+    }
+
+    if(content.Majorcities){
+      var majorcities = data.rels.filter(obj => {
+        return content.Majorcities.includes(obj.uuid);
       })
     }
 
@@ -47,10 +66,10 @@ const Country = ({ data, level }) => {
           <div className={styles.picture} style={{ backgroundImage: `url("${content.Picture}")` }}>
             </div>
 
-          <div>
-            <p>CAPITAL: </p>
-            {capital && capital.length>0 && <p>content.Capital.Name</p>}
-          </div>
+          
+          {capital && capital.length > 0 && <SmallCardList items={capital} title={resolveCapital[locale]} type="city"></SmallCardList>}
+
+          {majorcities && majorcities.length > 0 && <SmallCardList items={majorcities} title={resolveMajorCities[locale]} type="majorcity"></SmallCardList>}
 
         </div>
       </main>
