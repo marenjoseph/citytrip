@@ -12,7 +12,6 @@ import Personality from './Personality'
 import Studio from './Studio'
 import Genre from './Genre'
 import NewsItem from './NewsItem'
-import FrontpageSlideshow from './FrontpageSlideshow'
 import Intro from './Intro'
 import MovieList from './MovieList'
 import NewsItemList from './NewsItemList'
@@ -24,16 +23,17 @@ import TwoCol from './TwoCol'
 import Title from './Title'
 import TopMovies from './TopMovies'
 import AgeRating from './AgeRating'
+
 import City from './City'
 import Country from './Country'
 import Transport from './Transport'
+import FrontpageSlideshow from './FrontpageSlideshow.js'
 
 const Components = {
   'teaser': Teaser,
   'grid': Grid,
   'feature': Feature,
   'featured-posts': FeaturedPosts,
-  'page': Page,
   'post': BlogPost,
   'text': Text,
   'selected-posts': PostsList,
@@ -42,8 +42,6 @@ const Components = {
   'studio': Studio,
   'genre' : Genre,
   'newsitem': NewsItem,
-  'frontpageslideshow':FrontpageSlideshow,
-  'intro':Intro,
   'movielist':MovieList,
   'newsitemlist':NewsItemList,
   'productlist':ProductList,
@@ -55,9 +53,13 @@ const Components = {
   'title':Title,
   'topmovies':TopMovies,
   'agerating':AgeRating,
-  'City':City,
+  
+  'City' : City,
   'Country' : Country,
-  'Transport' : Transport
+  'Transport' : Transport,
+  'Page': Page,
+  'intro':Intro,
+  'frontpageslideshow' : FrontpageSlideshow
 }
 
 

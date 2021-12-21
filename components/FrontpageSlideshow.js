@@ -1,5 +1,3 @@
-
-
 import React, { useState } from "react"
 import DynamicComponent from './DynamicComponent'
 import SbEditable from 'storyblok-react'
@@ -40,12 +38,12 @@ const FrontpageSlideshow = ({ data, level, locale }) => {
     var content = data;
   }
 
-  const [newsitems, setNewsitems] = useState([]);
-
-  getFPSData(content._uid, locale, content.preview = false, 'newsitem').then(
-    function (result) {
-      setNewsitems(result.data.stories);
-    });
+  const [cities, setCity] = useState([]);
+  getFPSData(content._uid, locale, content.preview = false, 'City').then(
+    function(result){
+      setCity(result.data.stories);
+    }
+  );
 
 
   //returning the HTML
@@ -65,17 +63,17 @@ const FrontpageSlideshow = ({ data, level, locale }) => {
         containerClass="carousel-container"
         removeArrowOnDeviceType={["tablet", "mobile"]}
         dotListClass="custom-dot-list-style">
-        {newsitems.map((item) => {
+        {cities.map((item) => {
           const lang = item.lang === "default" ? "/en" : `/${item.lang}`;
           return (
             <a
-              href={`${lang}/newsitem/${item.slug}`}
+              href={`${lang}/city/${item.slug}`}
             >
               <div className={styles.item}>
-                <div className={styles.mainpicture} style={{ backgroundImage: `url("${item.content.mainpicture.filename}")` }}>
+                <div className={styles.mainpicture} style={{ backgroundImage: `url("${item.content.Picture}")` }}>
                   <div className={styles.newsiteminfo}>
                     <h1 className={styles.title}>
-                      {item.content.title}
+                      {item.content.Name}
                     </h1>
                   </div>
 

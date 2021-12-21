@@ -35,6 +35,7 @@ export async function getData(uuid, locale, preview, components, itemtype, sortb
         sbParams.filter_query.Majorcities = { any_in_array: uuid };
         break;
     }
+    // ADD HERE
   }
 
   if (sortby) {

@@ -23,14 +23,11 @@
   .newsiteminfo{
     position:absolute;
       bottom: 40px;
-      width: 40%;
-      min-width: 300px;
-      max-width: 600px;
       background:black;
       color: white;
       padding: 20px;
     .title{
-      font-family: 'Bungee Shade', cursive;
+      font-family: 'Aldrich', sans-serif;
       font-size: 1.2em;
       line-height: 1.3em;
       @media (min-width: 768px) {
