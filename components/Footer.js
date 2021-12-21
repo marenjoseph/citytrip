@@ -1,4 +1,6 @@
 import styles from "../styles/Footer.module.scss"
+import Image from "next/image"
+
 
 const Footer = () => {
   return (
@@ -6,13 +8,9 @@ const Footer = () => {
       <div className={styles.footer}>
 
         <div className="">
-          <img
-            src="https://a.storyblok.com/f/133261/3039x582/a60d166ec2/logo-colored-full.png/m/200x0"
-            alt="IMDBPlus Logo"
-            className=""
-          />
+            <Image src="/logo3.png" alt="Citytrips Logo" width="532" height="145" />
         </div>
-        <p>IMDB Plus is every bit as good as IMDB. Plus!</p>
+        <p>The best citytrip for your needs!</p>
       </div>
     </footer>
 
