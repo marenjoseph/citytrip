@@ -9,14 +9,12 @@ import SmallCardList from "./SmallCardList"
 
 const resolveCapital = {
   default: 'Capital:',
-  en: 'Capital:',
   nl: 'Hoofdstad:',
 }
 
 const resolveMajorCities = {
   default: 'Discover other beautiful cities:',
-  en: 'Discover other beautiful cities:',
-  nl: 'Ontdek ook deze prachtige steden'
+  nl: 'Ontdek ook deze prachtige steden:'
 }
 
 const Country = ({ data, level }) => {

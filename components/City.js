@@ -7,13 +7,11 @@ import RelatedItemGallerySmall from "./RelatedItemGallerySmall"
 
 const resolveCountry = {
   default: 'Country',
-  en: 'Country',
   nl: 'Land',
 }
 
 const resolveTransportation = {
   default: 'Getting there:',
-  en: 'Getting there:',
   nl: 'Hoe geraak je er:'
 }
 
