@@ -28,6 +28,8 @@ import City from './City'
 import Country from './Country'
 import Transport from './Transport'
 import FrontpageSlideshow from './FrontpageSlideshow.js'
+import CityList from './CityList'
+import CountryList from './CountryList'
 
 const Components = {
   'teaser': Teaser,
@@ -59,7 +61,9 @@ const Components = {
   'Transport' : Transport,
   'Page': Page,
   'intro':Intro,
-  'frontpageslideshow' : FrontpageSlideshow
+  'frontpageslideshow' : FrontpageSlideshow,
+  'citylist' : CityList,
+  'countrylist' : CountryList
 }
 
 

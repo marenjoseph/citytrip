@@ -67,7 +67,7 @@ const Country = ({ data, level }) => {
           
           {capital && capital.length > 0 && <SmallCardList items={capital} title={resolveCapital[locale]} type="city"></SmallCardList>}
 
-          {majorcities && majorcities.length > 0 && <SmallCardList items={majorcities} title={resolveMajorCities[locale]} type="majorcity"></SmallCardList>}
+          {majorcities && majorcities.length > 0 && <SmallCardList items={majorcities} title={resolveMajorCities[locale]} type="city"></SmallCardList>}
 
         </div>
       </main>
