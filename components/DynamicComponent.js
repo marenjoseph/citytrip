@@ -29,7 +29,7 @@ import Page from './Page'
 import FrontpageSlideshow from './FrontpageSlideshow.js'
 import CityList from './CityList'
 import CountryList from './CountryList'
-import TouristActivity from './TouristActivity'
+import Activity from './Activity'
 import Intro from './Intro'
 import ActivityList from './ActivityList'
 
@@ -66,7 +66,7 @@ const Components = {
   'frontpageslideshow' : FrontpageSlideshow,
   'citylist' : CityList,
   'countrylist' : CountryList,
-  'Activity' : TouristActivity,
+  'Activity' : Activity,
   'activitylist' : ActivityList
 }
 

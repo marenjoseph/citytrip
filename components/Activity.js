@@ -6,7 +6,7 @@ import { getData } from "../utils/storyblok"
 import InPageSlideshow from "./InPageSlideshow"
 import RelatedItemGallery from "./RelatedItemGallery"
 
-const TouristActivity = ({ data, level }) => {
+const Activity = ({ data, level }) => {
   var locale = 'en';
   if (level === 'data') {
     locale = data.story.lang;
@@ -56,4 +56,4 @@ const TouristActivity = ({ data, level }) => {
   )
 }
 
-export default TouristActivity
+export default Activity
