@@ -10,13 +10,13 @@ const Navigation = ({ locale, locales }) => {
     en: 'Countries',
     nl: 'Landen',
   }
-  const resolveNews = {
-    en: 'News',
-    nl: 'Nieuws',
+  const resolveActivities = {
+    en: 'Activities',
+    nl: 'Activiteiten',
   }
-  const resolveMerchandise = {
-    en: 'Shop',
-    nl: 'Winkel',
+  const resolveResidences = {
+    en: 'Residences',
+    nl: 'Verblijf',
   }
   let homeurl = "/";
   if (locale != 'default') {
@@ -36,16 +36,16 @@ const Navigation = ({ locale, locales }) => {
         <div className={styles.navlinkswrapper}>
           <div className={styles.navlinks}>
             <div className={styles.navlink}>
-              <a href={`${defaultLocale}pages/cities`} className={styles.movie}>{resolveCities[locale]}</a>
+              <a href={`${defaultLocale}pages/cities`}>{resolveCities[locale]}</a>
             </div>
             <div className={styles.navlink}>
-              <a href={`${defaultLocale}pages/countries`} className={styles.personality}>{resolveCountries[locale]}</a>
+              <a href={`${defaultLocale}pages/countries`}>{resolveCountries[locale]}</a>
             </div>
             <div className={styles.navlink}>
-              <a href={`${defaultLocale}pages/news`} className={styles.newsitem}>{resolveNews[locale]}</a>
+              <a href={`${defaultLocale}pages/touristactivities`}>{resolveActivities[locale]}</a>
             </div>
             <div className={styles.navlink}>
-              <a href={`${defaultLocale}pages/shop`} className={styles.product}>{resolveMerchandise[locale]}</a>
+              <a href={`${defaultLocale}pages/residences`}>{resolveResidences[locale]}</a>
             </div>
           </div>
           <div className={styles.navlocales}>
