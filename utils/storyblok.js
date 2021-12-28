@@ -34,8 +34,11 @@ export async function getData(uuid, locale, preview, components, itemtype, sortb
       case "Majorcities":
         sbParams.filter_query.Majorcities = { any_in_array: uuid };
         break;
+      case "activities":
+        sbParams.filter_query.activities = { any_in_array: uuid };
+        break;
+        // ADD HERE
     }
-    // ADD HERE
   }
 
   if (sortby) {

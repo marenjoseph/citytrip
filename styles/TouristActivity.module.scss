@@ -1,6 +1,6 @@
 @import '../styles/colors';
 
-.personality {
+.TouristActivity {
 
   .mainpicture {
     width: 100%;
@@ -22,6 +22,19 @@
       margin-right: 10px;
     }
   }
+
+  .citysegment {
+    margin-bottom: 40px;
+
+    .city {
+      padding: 10px 0px;
+      background-color: #f0f0f0;
+      max-width: 100px;
+      margin-right: 5px;
+      font-weight: 700;
+    }
+  }
+
 
   h1{
     margin-bottom: 10px;

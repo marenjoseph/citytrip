@@ -4,7 +4,6 @@ import FeaturedPosts from './FeaturedPosts'
 import Grid from './Grid'
 import Placeholder from './Placeholder'
 import PostsList from './PostsList'
-import Page from './Page'
 import BlogPost from './BlogPost'
 import Text from './Text'
 import Movie from './Movie'
@@ -12,7 +11,6 @@ import Personality from './Personality'
 import Studio from './Studio'
 import Genre from './Genre'
 import NewsItem from './NewsItem'
-import Intro from './Intro'
 import MovieList from './MovieList'
 import NewsItemList from './NewsItemList'
 import PersonalityList from './PersonalityList'
@@ -27,9 +25,13 @@ import AgeRating from './AgeRating'
 import City from './City'
 import Country from './Country'
 import Transport from './Transport'
+import Page from './Page'
 import FrontpageSlideshow from './FrontpageSlideshow.js'
 import CityList from './CityList'
 import CountryList from './CountryList'
+import TouristActivity from './TouristActivity'
+import Intro from './Intro'
+
 
 const Components = {
   'teaser': Teaser,
@@ -63,7 +65,8 @@ const Components = {
   'intro':Intro,
   'frontpageslideshow' : FrontpageSlideshow,
   'citylist' : CityList,
-  'countrylist' : CountryList
+  'countrylist' : CountryList,
+  'Tourist_activity' : TouristActivity
 }
 
 

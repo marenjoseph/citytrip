@@ -4,6 +4,8 @@ import { render } from "storyblok-rich-text-react-renderer"
 import styles from "../styles/City.module.scss"
 import { getData } from "../utils/storyblok"
 import RelatedItemGallerySmall from "./RelatedItemGallerySmall"
+import SmallCardList from "./SmallCardList"
+
 
 const resolveCountry = {
   default: 'Country',
@@ -25,6 +27,11 @@ const City = ({ data, level }) => {
     if(content.Transportation){
       var transportation = data.rels.filter(obj => {
         return content.Transportation.includes(obj.uuid);
+      })
+    }
+    if(content.activities){
+      var activities = data.rels.filter(obj => {
+        return content.activities.includes(obj.uuid);
       })
     }
 
@@ -76,6 +83,9 @@ const City = ({ data, level }) => {
           <div className={styles.review}>
             {render(content.Review)}
           </div>
+
+          {activities && activities.length > 0 && <SmallCardList items={activities} title="Tourist Activities" type="activity"></SmallCardList>}
+
 
         </div>
       </main>
