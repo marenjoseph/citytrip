@@ -32,6 +32,7 @@ import CountryList from './CountryList'
 import Activity from './Activity'
 import Intro from './Intro'
 import ActivityList from './ActivityList'
+import Residence from './Residence'
 
 const Components = {
   'teaser': Teaser,
@@ -67,7 +68,8 @@ const Components = {
   'citylist' : CityList,
   'countrylist' : CountryList,
   'Activity' : Activity,
-  'activitylist' : ActivityList
+  'activitylist' : ActivityList,
+  'Residence' : Residence
 }
 
 

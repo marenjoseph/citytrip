@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import SbEditable from "storyblok-react"
 import { render } from "storyblok-rich-text-react-renderer"
-import styles from "../styles/TouristActivity.module.scss"
+import styles from "../styles/Activity.module.scss"
 import { getData } from "../utils/storyblok"
 import InPageSlideshow from "./InPageSlideshow"
 import RelatedItemGallery from "./RelatedItemGallery"
@@ -28,13 +28,14 @@ const Activity = ({ data, level }) => {
   return (
     <SbEditable content={content} key={content._uid}>
       <main>
-        <div className={styles.TouristActivity}>
+        <div className={styles.activity}>
           <h1 className={styles.title}>
             {content.Title}
           </h1>
+
           <div className={styles.citysegment}>
             {city.map((item, index) => (
-              <a href={`/${item.full_slug}`} className={styles.city}>
+              <a href={`/${item.full_slug}`} className={styles.relateditem}>
                 <div className={styles.city}>
                   {item.content.Name}
                 </div>

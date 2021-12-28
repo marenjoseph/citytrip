@@ -37,6 +37,10 @@ export async function getData(uuid, locale, preview, components, itemtype, sortb
       case "activities":
         sbParams.filter_query.activities = { any_in_array: uuid };
         break;
+      case "residences":
+        sbParams.filter_query.residences = { any_in_array: uuid };
+        break;
+
         // ADD HERE
     }
   }

@@ -34,6 +34,7 @@ const SmallCardList = ({ items, title, type }) => {
             {(type == "city") && <SmallCard lang={lang} title={item.content.Name} picture={item.content.Picture} url={item.full_slug} type={type} />}
             {(type == "country") && <SmallCard lang={lang} title={item.content.Name} picture={item.content.Flag} url={item.full_slug} type={type} />}            
             {(type == "activity") && <SmallCard lang={lang} title={item.content.title} picture={item.content.mainpicture} url={item.full_slug} type={type} />}
+            {(type == "residence") && <SmallCard lang={lang} title={item.content.Name} picture={item.content.Picture} url={item.full_slug} type={type} />}
             {/* add other types */}
           </div>
         );

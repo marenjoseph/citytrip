@@ -1,16 +1,16 @@
 import React, { useState } from "react"
 import SbEditable from "storyblok-react"
 import { render } from "storyblok-rich-text-react-renderer"
-import styles from "../styles/City.module.scss"
+import styles from "../styles/Residence.module.scss"
 import { getData } from "../utils/storyblok"
 import RelatedItemGallerySmall from "./RelatedItemGallerySmall"
 import SmallCardList from "./SmallCardList"
 
 
 
-const resolveCountry = {
-  default: 'Country',
-  nl: 'Land',
+const resolveCity = {
+  default: 'City',
+  nl: 'Stad',
 }
 
 const resolveTransportation = {
@@ -18,18 +18,7 @@ const resolveTransportation = {
   nl: 'Hoe geraak je er:'
 }
 
-const resolveActivities = {
-  default: 'Tourist Activities:',
-  nl: 'Activiteiten:'
-}
-
-const resolveResidences = {
-  default: 'Residences:',
-  nl: 'Verblijven:'
-}
-
-
-const City = ({ data, level }) => {
+const Residence = ({ data, level }) => {
   var locale = 'en';
   //enriching data
   if (level === 'data') {
@@ -41,26 +30,15 @@ const City = ({ data, level }) => {
         return content.Transportation.includes(obj.uuid);
       })
     }
-    if(content.activities){
-      var activities = data.rels.filter(obj => {
-        return content.activities.includes(obj.uuid);
-      })
-    }
-    if(content.residences){
-      var residences = data.rels.filter(obj => {
-        return content.residences.includes(obj.uuid);
-      })
-    }
-
 
   } else {
     var content = data;
   }
 
-  const [country, setCountry] = useState([]);
-  getData(data.story.uuid, locale, content.preview = false, 'Country', 'Majorcities').then(
+  const [city, setCity] = useState([]);
+  getData(data.story.uuid, locale, content.preview = false, 'City', 'residences').then(
     function(result){
-      setCountry(result.data.stories);
+      setCity(result.data.stories);
     }
   )
 
@@ -76,7 +54,7 @@ const City = ({ data, level }) => {
           </h1>
           
           <div className={styles.countrysegment}>
-            {country.map((item, index) => (
+            {city.map((item, index) => (
               <a href={`/${item.full_slug}`}>
                 <div className={styles.country}>
                   {item.content.Name}
@@ -89,7 +67,7 @@ const City = ({ data, level }) => {
           </div>
 
           <div className={styles.summary}>
-            {render(content.Summary)}
+            {content.Address}
           </div>
 
           <div className={styles.transportationsegment}>
@@ -98,12 +76,7 @@ const City = ({ data, level }) => {
             </div>
           </div>
 
-          <div className={styles.review}>
-            {render(content.Review)}
-          </div>
 
-          {activities && activities.length > 0 && <SmallCardList items={activities} title={resolveActivities[locale]} type="activity"></SmallCardList>}
-          {residences && residences.length > 0 && <SmallCardList items={residences} title={resolveResidences[locale]} type="residence"></SmallCardList>}
 
         </div>
       </main>
@@ -111,4 +84,4 @@ const City = ({ data, level }) => {
   )
 }
 
-export default City
+export default Residence
