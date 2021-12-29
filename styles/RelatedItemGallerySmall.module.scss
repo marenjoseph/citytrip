@@ -4,8 +4,8 @@
 
 
   margin-top: 20 px;
-  display: flex;
-align-items: flex-start;
+  display: inline;
+  align-items: flex-start;
   flex-wrap: wrap;
   flex-direction: column;
   margin-bottom: 40px;
@@ -14,22 +14,8 @@ align-items: flex-start;
     align-items: center;
   }
 
-
-
-  .title {
-
-      font-size: 1.3em;
-      font-weight: 800;
-      width: 180px;
-      display: flex;
-      max-width: 300px;
-      min-width: 180px;
-      margin-bottom: 20px;
-  
-  }
-
   .relateditems {
-    display: flex;
+    display: inline;
     flex-wrap: wrap;
   }
 }

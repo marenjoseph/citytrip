@@ -9,10 +9,9 @@ const RelatedItemGallerySmall = ({ items, title, type }) => {
 
   return (
     <div className={styles.relateditemgallery}>
-      <div className={styles.title}>{title}</div>
       <div className={styles.relateditems}>
         {items.map((item, index) => (
-          <RelatedItemSmall title={item.content.from_name} picture={item.content.icon} url={item.full_slug} type={type} />
+          <RelatedItemSmall picture="/pin.png" url={item.full_slug} type={type} />
         ))}
       </div>
     </div>

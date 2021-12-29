@@ -4,18 +4,7 @@ import { render } from "storyblok-rich-text-react-renderer"
 import styles from "../styles/City.module.scss"
 import { getData } from "../utils/storyblok"
 import RelatedItemGallerySmall from "./RelatedItemGallerySmall"
-
-const resolveFrom= {
-    default: 'From',
-    en: 'From',
-    nl: 'Van',
-  }
-
-const resolveTo = {
-    default: 'To',
-    en: 'To',
-    nl: 'Naar',
-}
+import DynamicComponent from './DynamicComponent'
 
 
 
@@ -26,53 +15,23 @@ const Transport = ({ data, level }) => {
     locale = data.story.lang;
     var content = data.story.content;
 
-    if(content.from){
-      var departure = data.rels.filter(obj => {
-        return content.from.includes(obj.uuid);
-      })
-    }
-    if(content.to){
-        var destination = data.rels.filter(obj => {
-          return content.to.includes(obj.uuid);
-        })
-      }
-
   } else {
     var content = data;
   }
 
 
-  
-
   //returning the HTML
   return (
     <SbEditable content={content} key={content._uid}>
       <main>
-        {/* <div className={[styles.movie, styles.test].join(' ')}> */}
+        {content.body ? content.body.map((content) =>
+          <DynamicComponent data={content} key={content._uid} locale={locale} />
+        ) : null}
+
         <div className={styles.city}>      
-
-          <h1 className={styles.title}>
-            {departure.map((item, index) => (
-                  <div>{item.content.Name}</div>
-              ))}
-            {destination.map((item, index) => (
-                <div>{item.content.Name}</div>
-            ))}
-          </h1>
-
-          <dev>
-              <a href={`/${content.link}`}>
-                <div>
-                  nmbs
-                </div>
-              </a>
-            </dev>
-
-         
-
-
-
-          
+          <div>
+          <iframe src={`${content.map}`} width="800" height="450" allowfullscreen="" loading="lazy"></iframe>
+          </div>   
         </div>
       </main>
     </SbEditable>

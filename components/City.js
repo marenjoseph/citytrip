@@ -73,6 +73,7 @@ const City = ({ data, level }) => {
 
           <h1 className={styles.title}>
             {content.Name}
+            {transportation && transportation.length > 0 && <RelatedItemGallerySmall items={transportation} type="transportation"></RelatedItemGallerySmall>}
           </h1>
           
           <div className={styles.countrysegment}>
@@ -90,16 +91,6 @@ const City = ({ data, level }) => {
 
           <div className={styles.summary}>
             {render(content.Summary)}
-          </div>
-
-          <div className={styles.transportationsegment}>
-            <div className={styles.content}>
-              {transportation && transportation.length > 0 && <RelatedItemGallerySmall items={transportation} title={resolveTransportation[locale]} type="transportation"></RelatedItemGallerySmall>}
-            </div>
-          </div>
-
-          <div className={styles.review}>
-            {render(content.Review)}
           </div>
 
           {activities && activities.length > 0 && <SmallCardList items={activities} title={resolveActivities[locale]} type="activity"></SmallCardList>}
