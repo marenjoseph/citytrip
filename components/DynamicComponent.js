@@ -68,7 +68,7 @@ const Components = {
   'countrylist' : CountryList,
   'Activity' : Activity,
   'activitylist' : ActivityList,
-  'emailoptin':EmailOptin,
+  'Emailoptin':EmailOptin,
   'Residence' : Residence
 }
 
