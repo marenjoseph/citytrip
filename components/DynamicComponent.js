@@ -53,7 +53,6 @@ const Components = {
   'productcategory':Placeholder,
   'personalitylist':PersonalityList,
   'product':Product,
-  'emailoptin':EmailOptin,
   'twocol':TwoCol,
   'title':Title,
   'topmovies':TopMovies,
@@ -69,6 +68,7 @@ const Components = {
   'countrylist' : CountryList,
   'Activity' : Activity,
   'activitylist' : ActivityList,
+  'emailoptin':EmailOptin,
   'Residence' : Residence
 }
 
