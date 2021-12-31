@@ -30,7 +30,7 @@ const Transport = ({ data, level }) => {
 
         <div className={styles.city}>      
           <div>
-          <iframe src={`${content.map}`} width="800" height="450" allowfullscreen="" loading="lazy"></iframe>
+          <iframe src={`${content.map}`} width="80%" height="450" allowfullscreen="" loading="lazy"></iframe>
           </div>   
         </div>
       </main>
