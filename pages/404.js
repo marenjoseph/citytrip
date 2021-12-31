@@ -9,7 +9,7 @@ export default function Page404({ preview, locale, locales}) {
   // const enableBridge = preview; // load only inside preview mode
   const storyLoaded = useStoryblok(null, enableBridge, locale)
 
-  let content = (<h1>Not found</h1>)
+  let content = (<h1>404: Not found</h1>)
   if(storyLoaded && storyLoaded.content) content = (<DynamicComponent blok={storyLoaded.content} />)
 
   return (

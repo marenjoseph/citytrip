@@ -5,6 +5,7 @@ import styles from "../styles/Activity.module.scss"
 import { getData } from "../utils/storyblok"
 import InPageSlideshow from "./InPageSlideshow"
 import RelatedItemGallery from "./RelatedItemGallery"
+import RelatedItemGallerySmall from "./RelatedItemGallerySmall"
 
 
 const Activity = ({ data, level }) => {
@@ -12,6 +13,12 @@ const Activity = ({ data, level }) => {
   if (level === 'data') {
     locale = data.story.lang;
     var content = data.story.content;
+
+    if(content.Transportation){
+      var transportation = data.rels.filter(obj => {
+        return content.Transportation.includes(obj.uuid);
+      })
+    }
     
   } else {
     var content = data;
@@ -32,6 +39,7 @@ const Activity = ({ data, level }) => {
         <div className={styles.activity}>
           <h1 className={styles.title}>
             {content.Title}
+            {transportation && transportation.length > 0 && <RelatedItemGallerySmall items={transportation} type="transportation"></RelatedItemGallerySmall>}
           </h1>
 
           <div className={styles.citysegment}>
