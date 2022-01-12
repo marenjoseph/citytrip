@@ -8,13 +8,14 @@
         justify-content: center;
         border-radius: 0;
         padding: 10px 20px;
-        background-color: $color-primary-product;
-        color: black;
         font-size: 0.9em;
         font-weight: 800;
+        color: white;
+        background-color: black;
         cursor: pointer;
         &:hover{
-            background-color: $color-primary-newsitem;
+            background-color: $color-primary;
+            color: black;
         }
     }
 }

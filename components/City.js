@@ -68,7 +68,6 @@ const City = ({ data, level }) => {
   return (
     <SbEditable content={content} key={content._uid}>
       <main>
-        {/* <div className={[styles.movie, styles.test].join(' ')}> */}
         <div className={styles.city}>      
 
           <h1 className={styles.title}>

@@ -7,15 +7,24 @@ import RelatedItemGallerySmall from "./RelatedItemGallerySmall"
 import SmallCardList from "./SmallCardList"
 
 
-
-const resolveCity = {
-  default: 'City',
-  nl: 'Stad',
+const resolveInformation = {
+  default: 'Information:',
+  nl: 'Informatie:',
 }
 
-const resolveTransportation = {
-  default: 'Getting there:',
-  nl: 'Hoe geraak je er:'
+const resolvePrice = {
+  default: 'Price:',
+  nl: 'Prijs:',
+}
+
+const resolveWebsite = {
+  default: 'Website:',
+  nl: 'Website:',
+}
+
+const resolveClickHere = {
+  default: 'Click here!',
+  nl: 'Klik hier!',
 }
 
 const Residence = ({ data, level }) => {
@@ -50,8 +59,13 @@ const Residence = ({ data, level }) => {
         <div className={styles.city}>      
 
           <h1 className={styles.title}>
-            {content.Name}
+            {content.Name} {content.Stars}
           </h1>
+
+          <div>
+            {transportation && transportation.length > 0 && <RelatedItemGallerySmall items={transportation} type="transportation"></RelatedItemGallerySmall>}
+            {content.Address}
+          </div>  
           
           <div className={styles.countrysegment}>
             {city.map((item, index) => (
@@ -66,14 +80,15 @@ const Residence = ({ data, level }) => {
           <div className={styles.picture} style={{ backgroundImage: `url("${content.Picture}")` }}>
           </div>
 
-          <div className={styles.summary}>
-            {content.Address}
-          </div>
+          <h2>
+              {resolveInformation[locale]}
+          </h2>
 
-          <div className={styles.transportationsegment}>
-            <div className={styles.content}>
-              {transportation && transportation.length > 0 && <RelatedItemGallerySmall items={transportation} title={resolveTransportation[locale]} type="transportation"></RelatedItemGallerySmall>}
-            </div>
+          <div className={styles.wrapper}>         
+            <div className={styles.first}> {resolvePrice[locale]} </div>
+            <div className={styles.second}> {content.Price} </div>   
+            <div className={styles.first}> {resolveWebsite[locale]} </div>
+            <div className={styles.second}>  <a href={content.website} target="_blank"> {resolveClickHere[locale]} </a>  </div>   
           </div>
 
 

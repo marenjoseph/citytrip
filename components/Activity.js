@@ -7,6 +7,41 @@ import InPageSlideshow from "./InPageSlideshow"
 import RelatedItemGallery from "./RelatedItemGallery"
 import RelatedItemGallerySmall from "./RelatedItemGallerySmall"
 
+const resolveInformation = {
+  default: 'Information:',
+  nl: 'Informatie:',
+}
+
+const resolveType = {
+  default: 'Type:',
+  nl: 'Type:',
+}
+
+const resolvePrice = {
+  default: 'Price:',
+  nl: 'Prijs:',
+}
+
+const resolvePhone = {
+  default: 'Phonenumber:',
+  nl: 'Telefoonnummer:',
+}
+
+const resolveAge = {
+  default: 'Age:',
+  nl: 'Leeftijd:',
+}
+
+const resolveWebsite = {
+  default: 'Website:',
+  nl: 'Website:',
+}
+
+const resolveClickHere = {
+  default: 'Click here!',
+  nl: 'Klik hier!',
+}
+
 
 const Activity = ({ data, level }) => {
   var locale = 'en';
@@ -38,9 +73,13 @@ const Activity = ({ data, level }) => {
       <main>
         <div className={styles.activity}>
           <h1 className={styles.title}>
-            {content.Title}
-            {transportation && transportation.length > 0 && <RelatedItemGallerySmall items={transportation} type="transportation"></RelatedItemGallerySmall>}
+            {content.title}
           </h1>
+        
+          <div>
+            {transportation && transportation.length > 0 && <RelatedItemGallerySmall items={transportation} type="transportation"></RelatedItemGallerySmall>}
+            {content.Address}
+          </div>  
 
           <div className={styles.citysegment}>
             {city.map((item, index) => (
@@ -58,6 +97,23 @@ const Activity = ({ data, level }) => {
           </div>
           <div className={styles.short}>
             {render(content.Summary)}
+          </div>
+
+          <h2>
+              {resolveInformation[locale]}
+          </h2>
+
+          <div className={styles.wrapper}>
+            <div className={styles.first}> {resolveType[locale]} </div>
+            <div className={styles.second}> {content.Type} </div>            
+            <div className={styles.first}> {resolveWebsite[locale]} </div>
+            <div className={styles.second}>  <a href={content.website} target="_blank"> {resolveClickHere[locale]} </a>  </div>   
+            <div className={styles.first}> {resolvePhone[locale]} </div>
+            <div className={styles.second}> {content.phone_number} </div>    
+            <div className={styles.first}> {resolveAge[locale]} </div>
+            <div className={styles.second}> {content.Age} </div>    
+            <div className={styles.first}> {resolvePrice[locale]} </div>
+            <div className={styles.second}> {content.Price} </div>   
           </div>
 
         </div>
