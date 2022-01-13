@@ -7,13 +7,13 @@ const resolveText = {
 }
 
 
-const EmailOptin = ({data, level}) => {
+const EmailOptin = ({data, level, locale}) => {
   function toggleformstate() {
     setFormstate(!formstate);
   }
   const [formstate,setFormstate] = useState(false);
   
-  var locale = 'default';
+  // var locale = 'default';
 
 
   return (
