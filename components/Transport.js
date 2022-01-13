@@ -1,9 +1,6 @@
 import React, { useState } from "react"
 import SbEditable from "storyblok-react"
-import { render } from "storyblok-rich-text-react-renderer"
-import styles from "../styles/City.module.scss"
-import { getData } from "../utils/storyblok"
-import RelatedItemGallerySmall from "./RelatedItemGallerySmall"
+import styles from "../styles/Transport.module.scss"
 import DynamicComponent from './DynamicComponent'
 
 

@@ -1,12 +1,8 @@
 import React, { useState } from "react"
-import DynamicComponent from './DynamicComponent'
-import SbEditable from 'storyblok-react'
 import { getFPSData } from "../utils/storyblok"
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import styles from "../styles/FrontpageSlideshow.module.scss"
-import { render } from "storyblok-rich-text-react-renderer"
-
 
 
 

@@ -4,7 +4,6 @@ import { render } from "storyblok-rich-text-react-renderer"
 import styles from "../styles/Activity.module.scss"
 import { getData } from "../utils/storyblok"
 import InPageSlideshow from "./InPageSlideshow"
-import RelatedItemGallery from "./RelatedItemGallery"
 import RelatedItemGallerySmall from "./RelatedItemGallerySmall"
 
 const resolveInformation = {

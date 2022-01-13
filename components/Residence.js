@@ -1,10 +1,8 @@
 import React, { useState } from "react"
 import SbEditable from "storyblok-react"
-import { render } from "storyblok-rich-text-react-renderer"
 import styles from "../styles/Residence.module.scss"
 import { getData } from "../utils/storyblok"
 import RelatedItemGallerySmall from "./RelatedItemGallerySmall"
-import SmallCardList from "./SmallCardList"
 
 
 const resolveInformation = {

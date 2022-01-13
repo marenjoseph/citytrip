@@ -1,6 +1,4 @@
 import React, { useState } from "react"
-import SbEditable from "storyblok-react"
-import { render } from "storyblok-rich-text-react-renderer"
 import styles from "../styles/CityList.module.scss"
 import { getAllItems } from "../utils/storyblok"
 import SmallCardList from "./SmallCardList"

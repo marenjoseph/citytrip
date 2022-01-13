@@ -4,21 +4,20 @@ import NavigationMobile from './NavigationMobile'
 import Footer from '../components/Footer'
 import styles from "../styles/Layout.module.scss"
 import { useRouter } from 'next/router'
-import { basePath } from '../next.config'
 
 const Layout = ({ children, locale, locales, data }) => {
 
   const router = useRouter();
 
-  let title = "IMDBPlus";
-  let description = "description for page";
-  let sitename="IMDB Plus";
+  let title = "Citytrips Benelux";
+  let description = "Discover the most beautiful cities in the Benelux!";
+  let sitename="Citytrips Benelux";
   let url = router.basePath;
-  const hostname="https://imdbplus.vercel.app/"
+  const hostname="https://citytrip-eight.vercel.app/"
   if (typeof window !== 'undefined') {
     const hostname = window.location.hostname;
  }
-  let image=hostname+"assets/logo-colored-full.png";
+  let image=hostname+"assets/logo3.png";
 
 
   if (data && data.story) {

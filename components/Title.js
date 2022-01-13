@@ -1,6 +1,5 @@
 import SbEditable from "storyblok-react"
 import styles from "../styles/Title.module.scss"
-import DynamicComponent  from "./DynamicComponent";
 
 const Title = ({ data, level, locale }) => {
   if (level === 'data') {

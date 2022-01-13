@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import { render } from "storyblok-rich-text-react-renderer"
 import styles from "../styles/RelatedItem.module.scss"
 
 
