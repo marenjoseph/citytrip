@@ -33,10 +33,10 @@
   }
 
   .wrapper {
-    width: 500px;
+    width: 100%;
     overflow: hidden; /* will contain if #first is longer than #second */
     .first {
-        width: 300px;
+        width: 50%;
         float:left; 
     }
     .second {
