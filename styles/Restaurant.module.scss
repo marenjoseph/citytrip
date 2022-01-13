@@ -1,0 +1,66 @@
+@import '../styles/colors';
+
+.activity {
+
+  .mainpicture {
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 0px 10px #000;
+    margin-bottom: 40px;
+  }
+
+  .short {
+    font-weight: 800;
+  }
+
+  .citysegment {
+    margin-bottom: 40px;
+
+    .city {
+      padding: 10px 20px;
+      background-color: #f0f0f0;
+      max-width: 100px;
+      margin-right: 5px;
+      font-weight: 700;
+    }
+  }
+
+
+  h1{
+    margin-bottom: 10px;
+  }
+
+  .wrapper {
+    width: 500px;
+    overflow: hidden; /* will contain if #first is longer than #second */
+    .first {
+        width: 300px;
+        float:left; 
+    }
+    .second {
+        overflow: hidden; /* if you don't want #second to wrap below #first */
+    }
+  }
+
+
+
+  .title {}
+
+  .first-name {}
+
+  .last-name {}
+
+  .date-of-birth {}
+
+  .nationalities {
+    .nationality {}
+  }
+
+  .bio {}
+
+  .pictures{
+    .picture{}
+  }
+}

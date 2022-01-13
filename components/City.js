@@ -28,6 +28,11 @@ const resolveResidences = {
   nl: 'Verblijven:'
 }
 
+const resolveRestaurants = {
+  default: 'Restaurants:',
+  nl: 'Restaurants:'
+}
+
 
 const City = ({ data, level }) => {
   var locale = 'en';
@@ -51,6 +56,12 @@ const City = ({ data, level }) => {
         return content.residences.includes(obj.uuid);
       })
     }
+    if(content.restaurants){
+      var restaurants = data.rels.filter(obj => {
+        return content.restaurants.includes(obj.uuid);
+      })
+    }
+
 
 
   } else {
@@ -94,6 +105,7 @@ const City = ({ data, level }) => {
 
           {activities && activities.length > 0 && <SmallCardList items={activities} title={resolveActivities[locale]} type="activity"></SmallCardList>}
           {residences && residences.length > 0 && <SmallCardList items={residences} title={resolveResidences[locale]} type="residence"></SmallCardList>}
+          {restaurants && restaurants.length > 0 && <SmallCardList items={restaurants} title={resolveRestaurants[locale]} type="restaurant"></SmallCardList>}
 
         </div>
       </main>

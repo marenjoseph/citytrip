@@ -14,6 +14,8 @@ import Intro from './Intro'
 import ActivityList from './ActivityList'
 import Residence from './Residence'
 import ResidenceList from './ResidenceList'
+import Restaurant from './Restaurant'
+import RestaurantList from './RestaurantList'
 
 const Components = {
   'text': Text,
@@ -31,7 +33,9 @@ const Components = {
   'activitylist' : ActivityList,
   'Emailoptin':EmailOptin,
   'Residence' : Residence,
-  'residencelist' : ResidenceList
+  'residencelist' : ResidenceList,
+  "Restaurant" : Restaurant,
+  "Restaurantlist" : RestaurantList
 }
 
 
